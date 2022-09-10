@@ -15,32 +15,24 @@
 
     <!-- Header -->
     <header class="header">
-      <div class="header__logo_container">
-        <img src="./images/logo.svg" alt="Loopstudios" class="header__logo">
-      </div>
-      <nav class="header__nav">
-        <ul>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Careers</a></li>
-          <li><a href="#">Events</a></li>
-          <li><a href="#">Products</a></li>
-          <li><a href="#">Support</a></li>
-        </ul>
-      </nav>
-      <div class="header__toggler_container">
-        <img src="./images/icon-hamburger.svg" alt="=" class="header__toggler">
-      </div>
-      <!-- Header - Mobile Menu -->
-      <div class="header__mobile_menu">
-        <section class="header__mobile_menu_toggler_row">
-          <div class="header__mobile_menu_logo_Container">
-            <img src="./images/logo.svg" alt="Loopstudios" class="header__mobile_menu_logo">
-          </div>
-          <div class="header__mobile_menu_toggler_container">
-            <img src="./images/icon-close.svg" alt="X" class="header__mobile_menu_toggler">
-          </div>
-        </section>
-        <section class="header__mobile_menu_nav">
+      <div class="header__wrapper">
+        <div class="header__logo_container">
+          <img src="./images/logo.svg" alt="Loopstudios" class="header__logo">
+        </div>
+        <nav class="header__nav">
+          <ul>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Events</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">Support</a></li>
+          </ul>
+        </nav>
+        <div class="header__toggler_container" onclick="ToggleMenu()">
+          <img src="./images/icon-hamburger.svg" alt="=" class="header__toggler">
+        </div>
+        <!-- Header - Mobile Menu -->
+        <div class="header__mobile_menu">
           <ul class="header__mobile_menu_nav_container">
             <li><a href="#">About</a></li>
             <li><a href="#">Careers</a></li>
@@ -48,7 +40,7 @@
             <li><a href="#">Products</a></li>
             <li><a href="#">Support</a></li>
           </ul>
-        </section>
+        </div>
       </div>
     </header>
 

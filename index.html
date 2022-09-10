@@ -2,58 +2,188 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Loopstudios landing page</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <title>Loopstudios | Immersive experiences that deliver</title>
 </head>
 <body>
-  About
-  Careers
-  Events
-  Products
-  Support
+  <main>
 
-  Immersive experiences that deliver
+    <!-- Header -->
+    <header class="header">
+      <div class="header__logo_container">
+        <img src="./images/logo.svg" alt="Loopstudios" class="header__logo">
+      </div>
+      <nav class="header__nav">
+        <ul>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Events</a></li>
+          <li><a href="#">Products</a></li>
+          <li><a href="#">Support</a></li>
+        </ul>
+      </nav>
+      <div class="header__toggler_container">
+        <img src="./images/icon-hamburger.svg" alt="=" class="header__toggler">
+      </div>
+      <!-- Header - Mobile Menu -->
+      <div class="header__mobile_menu">
+        <section class="header__mobile_menu_toggler_row">
+          <div class="header__mobile_menu_logo_Container">
+            <img src="./images/logo.svg" alt="Loopstudios" class="header__mobile_menu_logo">
+          </div>
+          <div class="header__mobile_menu_toggler_container">
+            <img src="./images/icon-close.svg" alt="X" class="header__mobile_menu_toggler">
+          </div>
+        </section>
+        <section class="header__mobile_menu_nav">
+          <ul class="header__mobile_menu_nav_container">
+            <li><a href="#">About</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Events</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">Support</a></li>
+          </ul>
+        </section>
+      </div>
+    </header>
 
-  The leader in interactive VR
+    <!-- Hero -->
+    <section class="hero">
+      <picture class="hero__background_container">
+        <img src="./images/mobile/image-hero.jpg" alt="" class="hero__background_image">
+      </picture>
+      <div class="hero__content">
+        <h1 class="hero__heading">Immersive experiences that deliver</h1>
+      </div>
+    </section>
 
-  Founded in 2011, Loopstudios has been producing world-class virtual reality 
-  projects for some of the best companies around the globe. Our award-winning 
-  creations have transformed businesses through digital experiences that bind 
-  to their brand.
+  </main>
 
-  Our creations
+  <!-- Sections -->
+  <div class="sections-wrapper">
 
-  See all
+    <section class="intro">
+      <picture class="intro__background_container">
+        <img src="./images/mobile/image-interactive.jpg" alt="" class="intro__background_image">
+      </picture>
+      <div class="intro__content">
+        <h2 class="intro__heading">The leader in interactive VR</h2>
+        <p class="intro__para">Founded in 2011, Loopstudios has been producing world-class virtual reality projects for some of the best companies around the globe. Our award-winning creations have transformed businesses through digital experiences that bind to their brand.</p>
+      </div>
+    </section>
 
-  Deep earth
-  Night arcade
-  Soccer team VR
-  The grid
-  From up above VR
-  Pocket borealis
-  The curiosity
-  Make it fisheye
+    <section class="creations">
 
-  About
-  Careers
-  Events
-  Products
-  Support
+      <h2 class="creations__heading">Our Creations</h2>
+      <button class="creations__btn">See All</button>
 
-  © 2021 Loopstudios. All rights reserved.
+      <div class="creations__item">
+        <picture class="creations__item_mobile_image_container">
+          <img src="./images/mobile/image-deep-earth.jpg" alt="" class="creations__item_mobile_image">
+        </picture>
+        <picture class="creations__item_desktop_image_container">
+          <img src="./images/desktop/image-deep-earth.jpg" alt="" class="creations__item_desktop_image">
+        </picture>
+        <h3 class="creations__item_label">Deep earth</h3>
+      </div>
+      <div class="creations__item">
+        <picture class="creations__item_image_mobile_container">
+          <img src="./images/mobile/image-night-arcade.jpg" alt="" class="creations__item_mobile_image">
+        </picture>
+        <picture class="creations__item_desktop_image_container">
+          <img src="./images/desktop/image-night-arcade.jpg" alt="" class="creations__item_desktop_image">
+        </picture>
+        <h3 class="creations__item_label">Night arcade</h3>
+      </div>
+      <div class="creations__item">
+        <picture class="creations__item_image_mobile_container">
+          <img src="./images/mobile/image-soccer-team.jpg" alt="" class="creations__item_mobile_image">
+        </picture>
+        <picture class="creations__item_desktop_image_container">
+          <img src="./images/desktop/image-soccer-team.jpg" alt="" class="creations__item_desktop_image">
+        </picture>
+        <h3 class="creations__item_label">Soccer team VR</h3>
+      </div>
+      <div class="creations__item">
+        <picture class="creations__item_image_mobile_container">
+          <img src="./images/mobile/image-grid.jpg" alt="" class="creations__item_mobile_image">
+        </picture>
+        <picture class="creations__item_desktop_image_container">
+          <img src="./images/desktop/image-grid.jpg" alt="" class="creations__item_desktop_image">
+        </picture>
+        <h3 class="creations__item_label">The grid</h3>
+      </div>
+      <div class="creations__item">
+        <picture class="creations__item_image_mobile_container">
+          <img src="./images/mobile/image-from-above.jpg" alt="" class="creations__item_mobile_image">
+        </picture>
+        <picture class="creations__item_desktop_image_container">
+          <img src="./images/desktop/image-from-above.jpg" alt="" class="creations__item_desktop_image">
+        </picture>
+        <h3 class="creations__item_label">From up above VR</h3>
+      </div>
+      <div class="creations__item">
+        <picture class="creations__item_image_mobile_container">
+          <img src="./images/mobile/image-pocket-borealis.jpg" alt="" class="creations__item_mobile_image">
+        </picture>
+        <picture class="creations__item_desktop_image_container">
+          <img src="./images/desktop/image-pocket-borealis.jpg" alt="" class="creations__item_desktop_image">
+        </picture>
+        <h3 class="creations__item_label">Pocket borealis</h3>
+      </div>
+      <div class="creations__item">
+        <picture class="creations__item_image_mobile_container">
+          <img src="./images/mobile/image-curiosity.jpg" alt="" class="creations__item_mobile_image">
+        </picture>
+        <picture class="creations__item_desktop_image_container">
+          <img src="./images/desktop/image-curiosity.jpg" alt="" class="creations__item_desktop_image">
+        </picture>
+        <h3 class="creations__item_label">The curiosity</h3>
+      </div>
+      <div class="creations__item">
+        <picture class="creations__item_image_mobile_container">
+          <img src="./images/mobile/image-fisheye.jpg" alt="" class="creations__item_mobile_image">
+        </picture>
+        <picture class="creations__item_desktop_image_container">
+          <img src="./images/desktop/image-fisheye.jpg" alt="" class="creations__item_desktop_image">
+        </picture>
+        <h3 class="creations__item_label">Make it fisheye</h3>
+      </div>
+        
+    </section>
 
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    <!-- Footer -->
+    <footer class="footer">
+
+      <div class="footer__logo_container">
+        <img src="./images/logo.svg" alt="Loopstudios" class="header__logo">
+      </div>
+
+      <nav class="footer__page_links">
+        <ul>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Events</a></li>
+          <li><a href="#">Products</a></li>
+          <li><a href="#">Support</a></li>
+        </ul>
+      </nav>
+
+      <nav class="footer__social_links">
+        <ul>
+          <li><img src="./images/icon-facebook.svg" alt="facebook"></li>
+          <li><img src="./images/icon-twitter.svg" alt="twitter.svg"></li>
+          <li><img src="./images/icon-pinterest.svg" alt="pinterest.svg"></li>
+          <li><img src="./images/icon-instagram.svg" alt="instagram.svg"></li>
+        </ul>
+      </nav>
+
+      <p class="footer__trademark">© 2021 Loopstudios. All rights reserved.</p>
+
+    </footer>
+
   </div>
+
 </body>
 </html>

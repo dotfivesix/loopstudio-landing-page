@@ -1,0 +1,196 @@
+main
+{
+    position: relative;
+    @include center;
+
+    .hero
+    {
+        position:absolute;
+        z-index: 1;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        max-width: $heroMax;
+
+        &__background_container
+        {
+            width: 100%;
+            @include center;
+        }
+
+        &__background_image
+        {
+            width: 100%;
+            object-fit: cover;
+            max-height: 37.5rem;
+            content: url("./images/mobile/image-hero.jpg");
+        }
+
+        .header
+        {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 2rem;
+            position: absolute;
+            top: 0;
+            z-index: 1;
+            height: 5rem;
+
+            &__nav
+            {
+                display: none;
+            }
+
+            &__logo_container
+            {
+                @include center;
+            }
+            
+            &__logo
+            {
+                width: 10rem;
+            }
+
+            &__mobile_menu
+            {
+                position: fixed;
+                top:5.5rem;
+                right:2.8rem;
+                background-color: $black;
+                width: 12rem;
+                transform-origin: right top;
+                transition: transform .25s ease-in-out;
+                transform: scale(0);
+
+                &::before
+                {
+                    content: '';
+                    position: absolute;
+                    width: 0; 
+                    height: 0; 
+                    border-left: 1rem solid transparent;
+                    border-bottom: 1.5rem solid $black;
+                    top:-1.5rem;
+                    right:0;
+                }
+
+                &_nav_container
+                {
+                    list-style: none;
+                    padding: 1rem 0;
+
+                    & li
+                    {
+                        padding: 1rem;
+                        width: 100%;
+                        @include center;
+                    }
+
+                    & li a
+                    {
+                        color: $white;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+
+        &__content_container
+        {
+            padding: 0 2rem;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+        }
+
+        &__heading
+        {
+            font-family: $secondaryFont;
+            text-transform: uppercase;
+            border: 1px solid $white;
+            font-size: 10vw;
+            width: 100%;
+            max-width: 28rem;
+            padding: 1.5rem;
+            color: white;
+        }
+
+    }
+}
+
+@media screen and (min-width: 460px)
+{
+    .hero__heading { font-size: 3rem !important; }
+}
+
+@media screen and (min-width: 768px)
+{
+    main
+    {
+        .hero
+        {
+            &__background_image
+            {
+                content: url("./images/desktop/image-hero.jpg") !important;
+                filter: brightness(0.7);
+                max-height: 30rem;
+            }
+
+            &__background_container
+            {
+                overflow: hidden;
+            }
+
+            .header
+            {
+                &__toggler_container
+                {
+                    display: none;
+                }
+
+                &__logo
+                {
+                    width: 12rem;
+                }
+
+                &__nav
+                {
+                    display: flex;
+
+                    & ul
+                    {
+                        display: flex;
+                        list-style: none;
+
+                        & li
+                        {
+                            padding: 0 1rem;
+
+                            &:hover a
+                            {
+                                color: #ccc;
+                            }
+
+                            & a
+                            {
+                                color: $white;
+                                font-family: $primaryFont;
+                                text-decoration: none;
+                                font-size: 1.2rem;
+                            }
+                        }
+                    }
+                }
+            }
+
+
+        }
+
+    }
+    
+}

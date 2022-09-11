@@ -171,6 +171,7 @@ main .hero__heading {
   align-items: center;
 }
 .intro__background_image {
+  content: url("./images/mobile/image-interactive.jpg");
   width: 100%;
 }
 .intro__content {
@@ -199,6 +200,7 @@ main .hero__heading {
     justify-content: flex-start;
   }
   .intro__background_image {
+    content: url("./images/desktop/image-interactive.jpg");
     align-items: flex-end;
     height: 100%;
     width: 100%;

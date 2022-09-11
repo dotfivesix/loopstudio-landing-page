@@ -1,0 +1,115 @@
+.sections-wrapper
+{
+    max-width: $heroMax;
+    margin: 3rem auto;
+}
+
+.intro
+{
+    margin: 0 auto;
+    padding: 2rem;
+    max-width: $mobileMax;
+
+    &__background
+    {
+        &_container
+        {
+            width: 100%;
+            @include center;
+        }
+        &_image
+        {
+            width: 100%;
+        }
+    }
+
+    &__content
+    {
+        padding: 1.5rem;
+        text-align: center;
+    }
+
+    &__heading
+    {
+        font-family: $secondaryFont;
+        text-transform: uppercase;
+        font-size: 2.15rem;
+        margin: 1.2rem 0;
+    }
+
+    &__para
+    {
+        color: $darkGray;
+        line-height: 1.5;
+    }
+
+}
+
+@media screen and (min-width: $heroBp)
+{
+    .intro
+    {
+        padding: 5rem;
+        max-width: $heroBp;
+        max-width: 1100px;
+        position: relative;
+
+        &__background_container
+        {
+            justify-content: flex-start;
+        }
+
+        &__background_image
+        {
+            align-items: flex-end;
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+            width: 100%;
+            max-width: 650px;
+        }
+
+        &__content
+        {
+            padding: 2rem 0 0 3rem;
+            text-align: start;
+            width: 20rem;
+            position: absolute;
+            background-color: #fff;
+            bottom: 5rem;
+            right: 5rem;
+        }
+
+        &__heading
+        {
+            font-size: 2.125rem;
+        }
+
+        &__para
+        {
+            font-size: 1rem;
+        }
+
+    }
+}
+
+@media screen and (min-width: 900px)
+{
+    .intro
+    {
+        &__content
+        {
+            width: 32rem;
+        }
+
+        &__heading
+        {
+            font-size: 2.5rem;
+        }
+
+        &__para
+        {
+            font-size: 1.2rem;
+        }
+    }
+}

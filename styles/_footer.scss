@@ -1,0 +1,124 @@
+.footer
+{
+    background-color: $black;
+    color: $white;
+
+    &__wrapper
+    {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, auto);
+        gap: 1rem;
+        place-items: center;
+        padding: 2rem;
+    }
+
+    &__page_links
+    {
+        & ul
+        {
+            list-style: none;
+            text-align: center;
+
+            & li
+            {
+                padding: .5rem;
+                font-family: $primaryFont;
+                font-size: 1.2rem;
+
+                & a
+                {
+                    cursor: pointer;
+                    text-decoration: none;
+                    color: $white;
+
+                    &:hover
+                    {
+                        color: $darkGray;
+                    }
+
+                }
+            }
+        }
+    }
+
+    &__social_links ul
+    {
+        display: flex;
+        list-style: none;
+        gap: .8rem;
+        margin: .5rem 0;
+
+        & li
+        {
+            @include center;
+            cursor: pointer;
+
+            &:hover
+            {
+                filter: brightness(0.75);
+            }
+        }
+    }
+
+    &__copyright
+    {
+        font-family: $primaryFont;
+        color: $darkGray;
+    }
+
+}
+
+@media screen and (min-width: 768px)
+{
+    .footer
+    {
+        width: 100%;
+
+        &__wrapper
+        {
+            margin: 0 auto;
+            max-width: 1100px;
+            width: 100%;
+            grid-template-rows: auto auto;
+            grid-template-columns: auto auto;
+            place-items: none;
+        }
+
+        &__logo_container
+        {
+            margin-right: auto;
+            padding-left: 1rem;
+        }
+
+        &__page_links
+        {
+            margin-right: auto;
+            grid-row: 2;
+            grid-column: 1;
+            
+            ul
+            {
+                display: flex;
+                gap: .75rem;
+            }
+        }
+
+        &__social_links
+        {
+            margin-left: auto;
+
+            ul
+            {
+                gap: 1rem;
+            }
+
+        }
+
+        &__copyright
+        {
+            margin-left: auto;
+        }
+
+    }
+}

@@ -1,0 +1,142 @@
+#img-night-arcade {content:url("./images/mobile/image-night-arcade.jpg")}
+#img-deep-earth {content:url("./images/mobile/image-deep-earth.jpg")}
+#img-soccer-team {content:url("./images/mobile/image-soccer-team.jpg")}
+#img-grid {content:url("./images/mobile/image-grid.jpg")}
+#img-from-up {content:url("./images/mobile/image-from-above.jpg")}
+#img-pocket-borealis {content:url("./images/mobile/image-pocket-borealis.jpg")}
+#img-the-curiosity {content:url("./images/mobile/image-curiosity.jpg")}
+#img-make-it-fisheye {content:url("./images/mobile/image-fisheye.jpg")}
+
+.creations
+{
+    max-width: 30rem;
+    padding: 2rem;
+    display: grid;
+    gap: 2rem;
+    margin: 0 auto;
+    
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(10, auto);
+
+    &__btn
+    {
+        width: 9rem;
+        height: 3rem;
+        font-size: 1.2rem;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        outline: none;
+        border: 1px solid $black;
+        background-color: transparent;
+        font-family: $primaryFont;
+        cursor: pointer;
+        grid-row: 10/11;
+        margin: 0 auto;
+
+        &:hover
+        {
+            background-color: $black;
+            color: $white;
+        }
+
+    }
+
+    &__heading
+    {
+        margin: 0 auto;
+        font-family: $secondaryFont;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        font-size: 1.75rem;
+    }
+
+    &__item
+    {
+        position: relative;
+
+        &_image_container
+        {
+            width: 100%;
+            @include center;
+        }
+
+        &_image
+        {
+            width: 100%;
+            filter: brightness(0.75);
+        }
+
+        &_label
+        {
+            position: absolute;
+            bottom: .75rem;
+            left: 1rem;
+            color: $white;
+            font-family: $secondaryFont;
+            text-transform: uppercase;
+            font-size: 1.5rem;
+        }
+
+    }
+
+}
+
+@media screen and (min-width: 380px)
+{
+    .creations__item_label
+    {
+        font-size: 1.8rem;
+    }
+}
+
+@media screen and (min-width: 768px)
+{
+    #img-night-arcade {content:url("./images/desktop/image-night-arcade.jpg")}
+    #img-deep-earth {content:url("./images/desktop/image-deep-earth.jpg")}
+    #img-soccer-team {content:url("./images/desktop/image-soccer-team.jpg")}
+    #img-grid {content:url("./images/desktop/image-grid.jpg")}
+    #img-from-up {content:url("./images/desktop/image-from-above.jpg")}
+    #img-pocket-borealis {content:url("./images/desktop/image-pocket-borealis.jpg")}
+    #img-the-curiosity {content:url("./images/desktop/image-curiosity.jpg")}
+    #img-make-it-fisheye {content:url("./images/desktop/image-fisheye.jpg")}
+
+    .creations
+    {
+        margin-top: 3rem;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: auto 1fr 1fr;
+        max-width: 1100px;
+
+        &__btn
+        {
+            grid-column: 4;
+            grid-row: 1;
+            margin: auto 0 auto auto;
+        }
+
+        &__heading
+        {
+            grid-row: 1;
+            grid-column: 1/4;
+            margin: auto auto auto 0;
+        }
+
+        &__item
+        {
+            cursor: pointer;
+
+            &:hover
+            {
+                filter: saturate(1.5);
+                box-shadow: rgba(0,0,0,0.2) .5rem .5rem .5rem;
+            }
+
+            &_label
+            {
+                left: 1rem;
+                bottom: 1rem;
+            }
+        }
+    }
+}
+
